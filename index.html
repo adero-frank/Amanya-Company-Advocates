@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content=" ">
-    <title>Chawla & Co | Premier Legal Advocates</title>
+    <title>Amanya & Company Advocates | Premier Legal Advocates</title>
     <script>
         // Prevent theme flash - apply theme immediately before page renders
         (function() {
@@ -12,9 +12,9 @@
             document.documentElement.setAttribute('data-theme', theme);
         })();
     </script>
-    <meta name="description" content="Chawla & Co Advocates - Premier legal services in Nairobi, Kenya">
+    <meta name="description" content="Amanya & Company Advocates - Premier legal services in Nairobi, Kenya">
     <meta name="keywords" content=" ">
-    <meta name="author" content="Chawla & Co Advocates">
+    <meta name="author" content="Amanya & Company Advocates">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="#">
     
@@ -56,150 +56,493 @@
         <link rel="stylesheet" href="assets/css/mobile-responsive.css">
     <script type="module" src="assets/js/public.js"></script>
     
+    <!-- Custom Styles for About Stats -->
+    <style>
+        .about-stats {
+            display: flex !important;
+            flex-direction: row !important;
+            gap: 1.5rem !important;
+            justify-content: center !important;
+            flex-wrap: wrap !important;
+            margin-top: 2rem !important;
+        }
+        .about-stats .stat-item {
+            flex: 0 0 auto !important;
+            min-width: 120px !important;
+            max-width: 150px !important;
+            padding: 1rem !important;
+            text-align: center !important;
+        }
+        .about-stats .stat-icon {
+            font-size: 1.5rem !important;
+            margin-bottom: 0.5rem !important;
+        }
+        .about-stats .stat-number {
+            font-size: 1.8rem !important;
+            font-weight: 700 !important;
+            display: block !important;
+            line-height: 1.2 !important;
+        }
+        .about-stats .stat-suffix {
+            font-size: 1.8rem !important;
+            font-weight: 700 !important;
+        }
+        .about-stats .stat-label {
+            font-size: 0.85rem !important;
+            margin-top: 0.5rem !important;
+            display: block !important;
+            line-height: 1.3 !important;
+        }
+        @media (max-width: 768px) {
+            .about-stats {
+                gap: 1rem !important;
+            }
+            .about-stats .stat-item {
+                min-width: 100px !important;
+                max-width: 120px !important;
+                padding: 0.75rem !important;
+            }
+            .about-stats .stat-number,
+            .about-stats .stat-suffix {
+                font-size: 1.5rem !important;
+            }
+            .about-stats .stat-label {
+                font-size: 0.75rem !important;
+            }
+        }
+        
+        /* Reduce About Section Height */
+        .about-section {
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+        }
+        .about-section .section-title {
+            margin-bottom: 0.75rem !important;
+        }
+        .about-section .section-subtitle {
+            margin-bottom: 1rem !important;
+            font-size: 0.95rem !important;
+        }
+        .about-section .section-divider {
+            margin-bottom: 2rem !important;
+        }
+        .about-container {
+            gap: 2rem !important;
+            align-items: center !important;
+        }
+        .about-content h2 {
+            font-size: 1.8rem !important;
+            margin-bottom: 1rem !important;
+            line-height: 1.3 !important;
+        }
+        .about-content p {
+            font-size: 0.95rem !important;
+            line-height: 1.6 !important;
+            margin-bottom: 1rem !important;
+        }
+        .about-content p:last-of-type {
+            margin-bottom: 1.5rem !important;
+        }
+        .about-visual {
+            height: auto !important;
+            display: flex !important;
+            align-items: center !important;
+        }
+        .about-image-wrapper {
+            width: 100% !important;
+            height: auto !important;
+            overflow: visible !important;
+        }
+        .about-image {
+            width: 100% !important;
+            height: auto !important;
+            max-height: 350px !important;
+            object-fit: contain !important;
+            display: block !important;
+        }
+        @media (max-width: 768px) {
+            .about-section {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            .about-container {
+                flex-direction: column !important;
+                gap: 1.5rem !important;
+            }
+            .about-image {
+                max-height: 280px !important;
+            }
+        }
+        
+        /* Services Section - 3 Cards Layout */
+        .services-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 2rem !important;
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+        }
+        @media (max-width: 992px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        .services-cta {
+            text-align: center !important;
+            margin-top: 3rem !important;
+        }
+        .services-cta .btn {
+            padding: 1rem 2.5rem !important;
+            font-size: 1.1rem !important;
+        }
+        
+        /* Reduce Case Assessment Section Size */
+        .case-assessment-section {
+            padding: 2.5rem 0 !important;
+            width: 100% !important;
+        }
+        .case-assessment-container {
+            gap: 2.5rem !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            padding: 0 2rem !important;
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            margin: 0 auto !important;
+        }
+        .case-assessment-content {
+            gap: 1rem !important;
+        }
+        .case-assessment-content .section-title {
+            font-size: 2rem !important;
+            margin-bottom: 0.75rem !important;
+        }
+        .case-assessment-content .section-subtitle {
+            font-size: 0.95rem !important;
+            margin-bottom: 1rem !important;
+        }
+        .assessment-badge {
+            font-size: 0.75rem !important;
+            padding: 0.4rem 1rem !important;
+            margin-bottom: 0.5rem !important;
+        }
+        .assessment-features {
+            gap: 0.75rem !important;
+            margin: 1rem 0 !important;
+        }
+        .assessment-feature {
+            padding: 0.6rem !important;
+            font-size: 0.9rem !important;
+        }
+        .assessment-feature i {
+            font-size: 1rem !important;
+        }
+        .assessment-cta {
+            gap: 0.75rem !important;
+            margin-top: 0.75rem !important;
+        }
+        .assessment-cta .btn {
+            padding: 0.85rem 1.5rem !important;
+            font-size: 0.95rem !important;
+        }
+        .assessment-image-wrapper {
+            padding: 2rem 1.5rem !important;
+        }
+        .assessment-icon-large {
+            font-size: 3rem !important;
+            margin-bottom: 1.5rem !important;
+        }
+        .assessment-stats {
+            gap: 1rem !important;
+        }
+        .assessment-stat {
+            padding: 1rem !important;
+        }
+        .assessment-stat .stat-number {
+            font-size: 2rem !important;
+        }
+        .assessment-stat .stat-label {
+            font-size: 0.85rem !important;
+        }
+        @media (max-width: 768px) {
+            .case-assessment-section {
+                padding: 2rem 0 !important;
+            }
+            .case-assessment-container {
+                gap: 2rem !important;
+            }
+            .assessment-icon-large {
+                font-size: 2.5rem !important;
+            }
+            .assessment-stat .stat-number {
+                font-size: 1.75rem !important;
+            }
+        }
+        
+        /* Reduce Office Locations Section Spacing */
+        #locations.section {
+            padding: 2rem 0 !important;
+        }
+        #locations .section-title {
+            margin-bottom: 0.5rem !important;
+        }
+        #locations .section-subtitle {
+            margin-bottom: 0.75rem !important;
+        }
+        #locations .section-divider {
+            margin-bottom: 1rem !important;
+        }
+        .locations-container {
+            width: 100% !important;
+            max-width: 100% !important;
+            padding: 0 2rem !important;
+        }
+        .location-card {
+            padding: 1.25rem !important;
+            width: 100% !important;
+        }
+        .location-header {
+            margin-bottom: 0.75rem !important;
+        }
+        .location-name {
+            margin-bottom: 0.35rem !important;
+        }
+        .location-content {
+            gap: 1.25rem !important;
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            width: 100% !important;
+        }
+        @media (max-width: 768px) {
+            .location-content {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+        }
+        .location-info {
+            gap: 0.75rem !important;
+        }
+        .location-detail {
+            padding: 0.5rem 0 !important;
+            gap: 0.6rem !important;
+        }
+        .location-detail p {
+            margin: 0.2rem 0 0 0 !important;
+        }
+        .location-map {
+            margin-top: 0.5rem !important;
+        }
+        .location-map iframe {
+            height: 220px !important;
+            border-radius: 8px !important;
+        }
+        .location-map .btn {
+            margin-top: 0.5rem !important;
+        }
+        @media (max-width: 768px) {
+            #locations.section {
+                padding: 1.5rem 0 !important;
+            }
+            .location-card {
+                padding: 1rem !important;
+            }
+            .location-map iframe {
+                height: 200px !important;
+            }
+        }
+        
+        /* Reduce Contact Us Section Spacing */
+        .cta-section {
+            padding: 2rem 0 !important;
+        }
+        .cta-title {
+            margin-bottom: 0.5rem !important;
+        }
+        .cta-description {
+            margin-bottom: 1.25rem !important;
+        }
+        .cta-grid {
+            gap: 2rem !important;
+        }
+        .cta-left,
+        .cta-right {
+            gap: 0.75rem !important;
+        }
+        .cta-form-title {
+            margin-bottom: 0.5rem !important;
+        }
+        .cta-form-subtitle {
+            margin-bottom: 1rem !important;
+        }
+        .contact-form,
+        .newsletter-form {
+            gap: 0.75rem !important;
+        }
+        .form-row {
+            gap: 1rem !important;
+            margin-bottom: 0.75rem !important;
+        }
+        .form-group {
+            margin-bottom: 0.75rem !important;
+        }
+        .form-group label {
+            margin-bottom: 0.4rem !important;
+        }
+        .form-submit-wrapper {
+            margin-top: 0.75rem !important;
+        }
+        @media (max-width: 768px) {
+            .cta-section {
+                padding: 1.5rem 0 !important;
+            }
+            .cta-grid {
+                gap: 1.5rem !important;
+            }
+            .form-row {
+                gap: 0.75rem !important;
+                margin-bottom: 0.6rem !important;
+            }
+            .form-group {
+                margin-bottom: 0.6rem !important;
+            }
+        }
+    </style>
     
     
     
     <script type="application/ld+json">
-
 {
-  "@context" => ""https"://schema.org",
-  "@graph" => [
-    [
-      "@type" => "LegalService",
-      "@id" => "index.html#legalservice",
-      "name" => "Chawla & Co Advocates",
-      "description" => "Premier legal advocates providing comprehensive legal services in Nairobi, Kenya since 1985",
-      "url" => "index.html",
-      "telephone" => "+254757709931",
-      "email" => "info@chawlaco.com",
-      "priceRange" => "$$",
-      "address" => [
-        "@type" => "PostalAddress",
-        "streetAddress" => "Kanjata Road",
-        "addressLocality" => "Nairobi",
-        "addressRegion" => "Nairobi County",
-        "postalCode" => "00200",
-        "addressCountry" => "KE"
-      ],
-      "geo" => [
-        "@type" => "GeoCoordinates",
-        "latitude" => -1.2644,
-        "longitude" => 36.8219
-      ],
-      "areaServed" => [
-        "@type" => "Country",
-        "name" => "Kenya"
-      ],
-      "serviceType" => [
-        "Corporate Law",
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LegalService",
+      "@id": "index.html#legalservice",
+      "name": "Amanya & Company Advocates",
+      "description": "A Kenyan-based established and one of the fast growing law firms based in Nairobi, Kenya – providing innovative and solution-driven legal and business advisory services",
+      "url": "index.html",
+      "telephone": "+254729232801",
+      "email": "info@amanyaco.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shankardass House, Moi Avenue",
+        "addressLocality": "Nairobi",
+        "addressRegion": "Nairobi County",
+        "addressCountry": "KE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -1.2644,
+        "longitude": 36.8219
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Kenya"
+      },
+      "serviceType": [
+        "Dispute Resolution",
+        "Civil Cases",
+        "Corporate & Commercial Law",
+        "Commercial Litigation",
+        "Conveyancing",
         "Real Estate Law",
         "Family Law",
-        "Estate Planning",
-        "Litigation",
-        "Employment Law"
+        "Estate Planning"
       ],
-      "openingHoursSpecification" => [
-        [
-          "@type" => "OpeningHoursSpecification",
-          "dayOfWeek" => ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens" => ""08":00",
-          "closes" => ""18":00"
-        ],
-        [
-          "@type" => "OpeningHoursSpecification",
-          "dayOfWeek" => "Saturday",
-          "opens" => ""09":00",
-          "closes" => ""13":00"
-        ]
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "13:00"
+        }
       ],
-      "aggregateRating" => [
-        "@type" => "AggregateRating",
-        "ratingValue" => "4.9",
-        "reviewCount" => "127"
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "127"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "index.html#organization",
+      "name": "Amanya & Company Advocates",
+      "url": "index.html",
+      "description": "A Kenyan-based established and one of the fast growing law firms based in Nairobi, Kenya – providing innovative and solution-driven legal and business advisory services",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shankardass House, Moi Avenue",
+        "addressLocality": "Nairobi",
+        "addressRegion": "Nairobi County",
+        "addressCountry": "KE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+254729232801",
+        "contactType": "Customer Service",
+        "areaServed": "KE",
+        "availableLanguage": ["English", "Swahili"]
+      },
+      "legalName": "Amanya & Company Advocates",
+      "legalStructure": "Partnership",
+      "industry": "Legal Services",
+      "specialties": ["Dispute Resolution", "Corporate & Commercial Law", "Commercial Litigation", "Conveyancing", "Civil Cases"]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "index.html#localbusiness",
+      "name": "Amanya & Company Advocates",
+      "description": "Premier legal services in Nairobi, Kenya",
+      "url": "index.html",
+      "telephone": "+254729232801",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shankardass House, Moi Avenue",
+        "addressLocality": "Nairobi",
+        "addressRegion": "Nairobi County",
+        "addressCountry": "KE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -1.2644,
+        "longitude": 36.8219
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "13:00"
+        }
       ]
-    ],
-    [
-      "@type" => "Organization",
-      "@id" => "index.html#organization",
-      "name" => "Chawla & Co Advocates",
-      "url" => "index.html",
-      "description" => "Premier legal advocates providing comprehensive legal services in Nairobi, Kenya",
-      "address" => [
-        "@type" => "PostalAddress",
-        "streetAddress" => "Kanjata Road",
-        "addressLocality" => "Nairobi",
-        "addressRegion" => "Nairobi County",
-        "postalCode" => "00200",
-        "addressCountry" => "KE"
-      ],
-      "contactPoint" => [
-        "@type" => "ContactPoint",
-        "telephone" => "+254757709931",
-        "contactType" => "Customer Service",
-        "areaServed" => "KE",
-        "availableLanguage" => ["English", "Swahili"]
-      ],
-      "sameAs" => [
-        ""https"://www.facebook.com/chawlaco",
-        ""https"://www.linkedin.com/company/chawla-co-advocates",
-        ""https"://twitter.com/chawlaco"
-      ],
-      "foundingDate" => "1985",
-      "numberOfEmployees" => [
-        "@type" => "QuantitativeValue",
-        "value" => "11-50"
-      ],
-      "legalName" => "Chawla & Co Advocates",
-      "legalStructure" => "Partnership",
-      "industry" => "Legal Services",
-      "specialties" => ["Banking & Securities Law"]
-    ],
-    [
-      "@type" => "LocalBusiness",
-      "@id" => "index.html#localbusiness",
-      "name" => "Chawla & Co Advocates",
-      "description" => "Premier legal services in Nairobi, Kenya",
-      "url" => "index.html",
-      "telephone" => "+254757709931",
-      "priceRange" => "$$",
-      "address" => [
-        "@type" => "PostalAddress",
-        "streetAddress" => "Kanjata Road",
-        "addressLocality" => "Nairobi",
-        "addressRegion" => "Nairobi County",
-        "postalCode" => "00200",
-        "addressCountry" => "KE"
-      ],
-      "geo" => [
-        "@type" => "GeoCoordinates",
-        "latitude" => -1.2644,
-        "longitude" => 36.8219
-      ],
-      "openingHoursSpecification" => [
-        [
-          "@type" => "OpeningHoursSpecification",
-          "dayOfWeek" => ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens" => ""08":00",
-          "closes" => ""18":00"
-        ],
-        [
-          "@type" => "OpeningHoursSpecification",
-          "dayOfWeek" => "Saturday",
-          "opens" => ""09":00",
-          "closes" => ""13":00"
-        ]
-      ]
-    ]
+    }
   ]
 }
-
 </script>
 </head>
 <body>
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
         <div class="loading-logo">
-            <span>CHAWLA &amp; CO</span>
+            <span>AMANYA &amp; CO</span>
         </div>
         <div class="loading-bar">
             <div class="loading-progress" id="loadingProgress"></div>
@@ -214,19 +557,19 @@
             <div class="col-auto">
                 <div class="contact-item me-4">
                     <i class="fas fa-phone me-1"></i>
-                    <a href="tel:+254757709931" class="text-light text-decoration-none">0757 709931</a>
+                    <a href="tel:+254729232801" class="text-light text-decoration-none">0729 232801 / 0703 982788</a>
                 </div>
             </div>
             <div class="col-auto">
                 <div class="contact-item me-4">
                     <i class="fas fa-map-marker-alt me-1"></i>
-                    <span class="text-light">Kanjata Road, Nairobi, Nairobi 00200, KE</span>
+                    <span class="text-light">Shankardass House, Moi Avenue, Nairobi</span>
                 </div>
             </div>
             <div class="col-auto">
                 <div class="contact-item">
                     <i class="fas fa-envelope me-1"></i>
-                    <a href="mailto:info@chawlaco.com" class="text-light text-decoration-none">info@chawlaco.com</a>
+                    <a href="mailto:info@amanyaco.com" class="text-light text-decoration-none">info@amanyaco.com</a>
                 </div>
             </div>
         </div>
@@ -238,7 +581,7 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
             <div class="brand-text d-flex flex-column">
-                <span class="brand-name">Chawla &amp; Co Advocates</span>
+                <span class="brand-name">Amanya &amp; Company Advocates</span>
             </div>
         </a>
 
@@ -251,15 +594,15 @@
             <div class="navbar-contact-info-mobile d-lg-none mb-3">
                 <div class="contact-item-mobile text-center mb-2">
                     <i class="fas fa-phone me-1"></i>
-                    <a href="tel:+254757709931" class="text-light text-decoration-none">0757 709931</a>
+                    <a href="tel:+254729232801" class="text-light text-decoration-none">0729 232801 / 0703 982788</a>
                 </div>
                 <div class="contact-item-mobile text-center mb-2">
                     <i class="fas fa-map-marker-alt me-1"></i>
-                    <span class="text-light">Kanjata Road, Nairobi, Nairobi 00200, KE</span>
+                    <span class="text-light">Shankardass House, Moi Avenue, Nairobi</span>
                 </div>
                 <div class="contact-item-mobile text-center mb-3">
                     <i class="fas fa-envelope me-1"></i>
-                    <a href="mailto:info@chawlaco.com" class="text-light text-decoration-none">info@chawlaco.com</a>
+                    <a href="mailto:info@amanyaco.com" class="text-light text-decoration-none">info@amanyaco.com</a>
                 </div>
                 <!-- Mobile Theme Toggle -->
                 <div class="mobile-theme-toggle text-center">
@@ -318,11 +661,11 @@
 
 <!-- Mobile Quick Action Bar -->
 <div class="mobile-action-bar d-lg-none">
-    <a href="tel:+254757709931" class="mobile-action">
+    <a href="tel:+254729232801" class="mobile-action">
         <i class="fas fa-phone"></i>
         <span>Call Us</span>
     </a>
-    <a href="https://wa.me/254757709931" target="_blank" rel="noopener" class="mobile-action">
+    <a href="https://wa.me/254729232801" target="_blank" rel="noopener" class="mobile-action">
         <i class="fab fa-whatsapp"></i>
         <span>WhatsApp</span>
     </a>
@@ -339,7 +682,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-pre-title">
-                <span class="hero-badge">Established 1985</span>
+                <span class="hero-badge">Fast Growing Firm</span>
                 <span class="hero-trust-indicators">
                     <i class="fas fa-award"></i> Award-Winning Firm
                     <span class="divider">|</span>
@@ -347,7 +690,7 @@
                 </span>
             </div>
             <h1 class="hero-title">Where <span>Justice</span> Meets <span>Excellence</span></h1>
-            <p class="hero-subtitle">Since 1985, Chawla & Co Advocates has been dedicated to providing exceptional legal services, combining expertise with unwavering commitment to our clients' success.</p>
+            <p class="hero-subtitle">AMANYA & COMPANY ADVOCATES is a Kenyan-based established and one of the fast growing law firms based in Nairobi, Kenya – providing innovative and solution-driven legal and business advisory services to our dynamic client base.</p>
             <div class="hero-cta">
                 <a href="#" class="btn btn-primary">
                     <span>Book Appointment</span>
@@ -409,13 +752,13 @@
     <section class="section about-section" id="about">
         <div class="bg-pattern"></div>
         <h2 class="section-title">Our <span>Legacy</span> of Excellence</h2>
-        <p class="section-subtitle">Since our founding in 1985, we have built a reputation for excellence, integrity, and success in the legal field.</p>
+        <p class="section-subtitle">We are a fast-growing law firm providing innovative and solution-driven legal and business advisory services with many years of experience in high level legal practice in Kenya.</p>
         <div class="section-divider"></div>
         <div class="about-container">
             <div class="about-content">
                 <h2>A Tradition of <span>Legal Excellence</span></h2>
-                <p>Founded in 1985, Chawla & Co Advocates is a trusted law firm partnership in the region. Our founding partners envisioned a practice that would not only provide exceptional legal counsel but would also serve as a pillar of integrity in the legal community. Specializing in Banking & Securities Law, we serve clients across Kenya with a team of 11-50 dedicated professionals.</p>
-                <p>Over the past 40 years, we have built a strong foundation of success by approaching each case with meticulous attention to detail, strategic foresight, and an unwavering commitment to our clients' objectives.</p>
+                <p>AMANYA & COMPANY ADVOCATES is a Kenyan-based established and one of the fast growing law firms based in Nairobi, Kenya – providing innovative and solution-driven legal and business advisory services to its dynamic client base. We provide comprehensive legal services including dispute resolution, civil cases, corporate & commercial law, commercial litigation, and conveyancing, with many years of experience in high level legal practice in Kenya.</p>
+                <p>We provide our clients with innovative, practical and commercially prudent legal and business solutions. We act for individuals, local and international companies, investors, financial institutions, and non-governmental organizations. <strong>We Listen - We Act For You - We Go Over & Beyond</strong></p>
                 
                 <div class="about-stats">
                     <div class="stat-item fade-in">
@@ -425,14 +768,6 @@
                         <span class="stat-number" data-target="150">0</span>
                         <span class="stat-suffix">+</span>
                         <span class="stat-label">Cases Resolved</span>
-                    </div>
-                    <div class="stat-item fade-in">
-                        <div class="stat-icon">
-                            <i class="fas fa-calendar-alt"></i>
-                        </div>
-                        <span class="stat-number" data-target="40">0</span>
-                        <span class="stat-suffix">+</span>
-                        <span class="stat-label">Years Experience</span>
                     </div>
                     <div class="stat-item fade-in">
                         <div class="stat-icon">
@@ -448,13 +783,13 @@
                         </div>
                         <span class="stat-number" data-target="150">0</span>
                         <span class="stat-suffix">+</span>
-                        <span class="stat-label">Cases Resolved</span>
+                        <span class="stat-label">Happy Clients</span>
                     </div>
                 </div>
             </div>
             <div class="about-visual">
                 <div class="about-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Chawla & Co Advocates - Legal Excellence" class="about-image">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Amanya & Company Advocates - Legal Excellence" class="about-image">
                     <div class="about-image-overlay"></div>
                 </div>
             </div>
@@ -472,50 +807,32 @@
                 <div class="service-icon">
                     <i class="fas fa-gavel"></i>
                 </div>
-                <h3 class="service-title">Corporate Law</h3>
+                <h3 class="service-title">Corporate & Commercial</h3>
                 <p class="service-description">Strategic counsel for business formation, mergers & acquisitions, compliance, and corporate governance. We help organizations navigate complex legal landscapes to achieve their business objectives.</p>
                 <a href="practice-areas/corporate-law.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="service-card fade-in">
                 <div class="service-icon">
-                    <i class="fas fa-home"></i>
+                    <i class="fas fa-balance-scale"></i>
                 </div>
-                <h3 class="service-title">Real Estate Law</h3>
-                <p class="service-description">Comprehensive guidance on property transactions, development projects, leasing agreements, zoning issues, and dispute resolution for all real estate matters.</p>
-                <a href="practice-areas/real-estate-law.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">
-                    <i class="fas fa-user-friends"></i>
-                </div>
-                <h3 class="service-title">Family Law</h3>
-                <p class="service-description">Compassionate representation for divorce, child custody, adoption, prenuptial agreements, and other sensitive family legal matters handled with discretion and care.</p>
-                <a href="practice-areas/family-law.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <h3 class="service-title">Dispute Resolution & Commercial Litigation</h3>
+                <p class="service-description">Aggressive representation in civil litigation, commercial litigation, alternative dispute resolution, and courtroom proceedings with a proven track record of achieving favorable outcomes for our clients.</p>
+                <a href="practice-areas/litigation.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="service-card fade-in">
                 <div class="service-icon">
                     <i class="fas fa-file-contract"></i>
                 </div>
-                <h3 class="service-title">Estate Planning</h3>
-                <p class="service-description">Thoughtful preparation of wills, trusts, powers of attorney, and comprehensive estate plans to protect your legacy and provide for your loved ones according to your wishes.</p>
-                <a href="practice-areas/estate-planning.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <h3 class="service-title">Conveyancing</h3>
+                <p class="service-description">Expert guidance on property transactions, title transfers, land registration, and all conveyancing matters. We ensure smooth and legally compliant property transactions for our clients.</p>
+                <a href="practice-areas/conveyancing.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">
-                    <i class="fas fa-balance-scale"></i>
-                </div>
-                <h3 class="service-title">Litigation</h3>
-                <p class="service-description">Aggressive representation in civil litigation, alternative dispute resolution, and courtroom proceedings with a proven track record of achieving favorable outcomes for our clients.</p>
-                <a href="practice-areas/litigation.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-icon">
-                    <i class="fas fa-briefcase"></i>
-                </div>
-                <h3 class="service-title">Employment Law</h3>
-                <p class="service-description">Expert guidance on workplace issues, employment contracts, compliance with labor laws, discrimination claims, and resolution of employment disputes for both employers and employees.</p>
-                <a href="practice-areas/employment-law.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-            </div>
+        </div>
+        <div class="services-cta" style="text-align: center; margin-top: 3rem;">
+            <a href="practice-areas/" class="btn btn-primary btn-lg">
+                <span>View All Practice Areas</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
         </div>
     </section>
 
@@ -576,17 +893,6 @@
         </div>
     </section>
 
-    <!-- Attorneys Section -->
-    <section class="section attorneys-section" id="attorneys">
-        <div class="bg-pattern"></div>
-        <h2 class="section-title">Our <span>Legal</span> Team</h2>
-        <p class="section-subtitle">Meet the dedicated attorneys who bring expertise, passion, and commitment to every case.</p>
-        <div class="section-divider"></div>
-        <div class="attorneys-grid">
-            <!-- Attorney profiles removed for demo purposes -->
-        </div>
-    </section>
-
     <!-- Testimonials Section -->
     <section class="section testimonials-section" id="testimonials">
         <div class="bg-pattern"></div>
@@ -603,7 +909,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">Chawla & Co Advocates provided exceptional representation during a complex corporate merger that involved multiple international jurisdictions. Their strategic approach and attention to detail not only saved our company millions but ensured a seamless transition that positioned us for unprecedented growth.</p>
+                    <p class="testimonial-text">Amanya & Company Advocates provided exceptional representation during a complex corporate merger that involved multiple international jurisdictions. Their strategic approach and attention to detail not only saved our company millions but ensured a seamless transition that positioned us for unprecedented growth.</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">RJ</div>
                         <div class="author-info">
@@ -620,7 +926,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="testimonial-text">When I needed help with a complex real estate transaction, the team at Chawla & Co went above and beyond. They were responsive, professional, and incredibly knowledgeable. Thanks to their expertise, we closed the deal smoothly and avoided potential legal pitfalls.</p>
+                    <p class="testimonial-text">When I needed help with a complex real estate transaction, the team at Amanya & Company Advocates went above and beyond. They were responsive, professional, and incredibly knowledgeable. Thanks to their expertise, we closed the deal smoothly and avoided potential legal pitfalls.</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">MW</div>
                         <div class="author-info">
@@ -742,48 +1048,6 @@
         </div>
     </section>
 
-    <!-- Awards & Recognition Section -->
-    <section class="section awards-section" id="awards">
-        <div class="bg-pattern"></div>
-        <h2 class="section-title">Awards & <span>Recognition</span></h2>
-        <p class="section-subtitle">Our commitment to excellence has been recognized by leading legal organizations and industry publications.</p>
-        <div class="section-divider"></div>
-        <div class="awards-grid">
-            <div class="award-card fade-in">
-                <div class="award-icon">
-                    <i class="fas fa-trophy"></i>
-                </div>
-                <h3 class="award-title">Best Law Firm 2023</h3>
-                <p class="award-organization">Kenya Legal Awards</p>
-                <p class="award-year">2023</p>
-            </div>
-            <div class="award-card fade-in">
-                <div class="award-icon">
-                    <i class="fas fa-medal"></i>
-                </div>
-                <h3 class="award-title">Excellence in Corporate Law</h3>
-                <p class="award-organization">East Africa Legal Excellence</p>
-                <p class="award-year">2022</p>
-            </div>
-            <div class="award-card fade-in">
-                <div class="award-icon">
-                    <i class="fas fa-award"></i>
-                </div>
-                <h3 class="award-title">Top Real Estate Law Firm</h3>
-                <p class="award-organization">Property Law Association</p>
-                <p class="award-year">2023</p>
-            </div>
-            <div class="award-card fade-in">
-                <div class="award-icon">
-                    <i class="fas fa-star"></i>
-                </div>
-                <h3 class="award-title">Client Choice Award</h3>
-                <p class="award-organization">Legal Services Review</p>
-                <p class="award-year">2022-2023</p>
-            </div>
-        </div>
-    </section>
-
     <!-- FAQ Section -->
     <section class="section testimonials-section" id="faq">
         <div class="bg-pattern"></div>
@@ -824,7 +1088,7 @@
                     <i class="fas fa-chevron-down faq-icon"></i>
                 </button>
                 <div class="faq-answer">
-                    <p>We specialize in Banking & Securities Law, Corporate Law, Real Estate Law, Family Law, Estate Planning, Litigation, and Employment Law. Our team of 11-50 experienced attorneys brings deep expertise in each practice area to serve your diverse legal needs.</p>
+                    <p>We specialize in dispute resolution, civil cases, corporate & commercial law, commercial litigation, conveyancing, and handle various civil matters. Our experienced team brings deep expertise in each practice area to serve your diverse legal needs.</p>
                 </div>
             </div>
             <div class="faq-item fade-in">
@@ -868,28 +1132,28 @@
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
                                 <strong>Address:</strong>
-                                <p>Kanjata Road<br>Nairobi, Nairobi 00200, KE</p>
+                                <p>Shankardass House<br>Moi Avenue, Nairobi</p>
                             </div>
                         </div>
                         <div class="location-detail">
                             <i class="fas fa-phone"></i>
                             <div>
                                 <strong>Phone:</strong>
-                                <p>0757 709931</p>
+                                <p>0729 232801 / 0703 982788</p>
                             </div>
                         </div>
                         <div class="location-detail">
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <strong>Email:</strong>
-                                <p>nairobi@chawlaco.com</p>
+                                <p>info@amanyaco.com</p>
                             </div>
                         </div>
                         <div class="location-detail">
                             <i class="fas fa-clock"></i>
                             <div>
                                 <strong>Office Hours:</strong>
-                                <p>Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 1:00 PM</p>
+                                <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday & Holidays: Closed</p>
                             </div>
                         </div>
                     </div>
@@ -938,7 +1202,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="0757 709931">
+                            <input type="tel" id="phone" name="phone" placeholder="0729 232801 / 0703 982788">
                             <span class="form-error"></span>
                         </div>
                         <div class="form-group">
@@ -950,7 +1214,8 @@
                                 <option value="family">Family Law</option>
                                 <option value="estate">Estate Planning</option>
                                 <option value="litigation">Litigation</option>
-                                <option value="employment">Employment Law</option>
+                                <option value="conveyancing">Conveyancing</option>
+                                <option value="civil">Civil Cases</option>
                                 <option value="other">Other</option>
                             </select>
                         </div>
@@ -1005,8 +1270,8 @@
     <footer>
     <div class="footer-container">
         <div class="footer-col">
-            <h3>CHAWLA & CO</h3>
-            <p>For over 25 years, we have provided exceptional legal services with integrity, dedication, and an unwavering commitment to client success. Our legacy of excellence continues to define the standard for legal representation.</p>
+            <h3>AMANYA & COMPANY ADVOCATES</h3>
+            <p>AMANYA & COMPANY ADVOCATES is a Kenyan-based established and one of the fast growing law firms based in Nairobi, Kenya – providing innovative and solution-driven legal and business advisory services to our dynamic client base. We Listen - We Act For You - We Go Over & Beyond.</p>
             <div class="social-links">
                 <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
@@ -1022,7 +1287,8 @@
                 <li><a href="#">Family Law</a></li>
                 <li><a href="#">Estate Planning</a></li>
                 <li><a href="#">Litigation</a></li>
-                <li><a href="#">Employment Law</a></li>
+                <li><a href="#">Conveyancing</a></li>
+                <li><a href="#">Civil Cases</a></li>
             </ul>
         </div>
         <div class="footer-col">
@@ -1031,7 +1297,6 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#services">Our Services</a></li>
-                <li><a href="#attorneys">Our Attorneys</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -1039,15 +1304,15 @@
         <div class="footer-col">
             <h3>Contact Us</h3>
             <ul class="footer-links">
-                <li><i class="fas fa-map-marker-alt"></i> <a href="#">Kanjata Road, Nairobi, Nairobi 00200, KE</a></li>
-                <li><i class="fas fa-phone"></i> <a href="#">0757 709931</a></li>
-                <li><i class="fas fa-envelope"></i> <a href="#">info@chawlaco.com</a></li>
-                <li><i class="fas fa-clock"></i> <a href="#">Mon-Fri: 8:00 AM - 6:00 PM</a></li>
+                <li><i class="fas fa-map-marker-alt"></i> <a href="#">Shankardass House, Moi Avenue, Nairobi</a></li>
+                <li><i class="fas fa-phone"></i> <a href="#">0729 232801 / 0703 982788</a></li>
+                <li><i class="fas fa-envelope"></i> <a href="#">info@amanyaco.com</a></li>
+                <li><i class="fas fa-clock"></i> <a href="#">Mon-Fri: 8:00 AM - 5:00 PM | Sat: 9:00 AM - 1:00 PM</a></li>
             </ul>
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy;  Chawla & Co Advocates. All Rights Reserved. | <a href="#" style="color: var(--text-gray);">Privacy Policy</a> | <a href="#" style="color: var(--text-gray);">Terms of Use</a></p>
+        <p>&copy;  Amanya & Company Advocates. All Rights Reserved. | <a href="#" style="color: var(--text-gray);">Privacy Policy</a> | <a href="#" style="color: var(--text-gray);">Terms of Use</a></p>
     </div>
 </footer>
 
@@ -1058,7 +1323,7 @@
             <span class="ripple-effect"></span>
             <i class="fas fa-calendar-check"></i>
         </a>
-        <a href="tel:+254757709931" class="fab-btn fab-phone" title="Call Us">
+        <a href="tel:+254729232801" class="fab-btn fab-phone" title="Call Us">
             <span class="ripple-effect"></span>
             <i class="fas fa-phone"></i>
         </a>
@@ -1088,7 +1353,7 @@
                         <span class="whatsapp-online-indicator"></span>
                     </div>
                     <div class="whatsapp-profile-info">
-                        <h3>Chawla & Co Advocates</h3>
+                        <h3>Amanya & Company Advocates</h3>
                         <p>Typically replies within minutes</p>
                     </div>
                 </div>
@@ -1106,7 +1371,7 @@
             
             <!-- Footer -->
             <div class="whatsapp-popup-footer">
-                <a href="https://wa.me/254757709931" target="_blank" class="whatsapp-popup-button" id="whatsappOpenBtn">
+                <a href="https://wa.me/254729232801" target="_blank" class="whatsapp-popup-button" id="whatsappOpenBtn">
                     <i class="fab fa-whatsapp"></i>
                     <span>WhatsApp Us</span>
                 </a>
